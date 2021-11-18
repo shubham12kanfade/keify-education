@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {testimonial} from '../data/testimonial';
 import StudentTestimonial from '../component/StudentTestimonial';
 import slider1 from '../assets/img/slider1.jpg';
+import NewSticker from '../assets/img/newSticker.png';
 
 function Home() {
   
@@ -39,7 +40,7 @@ function Home() {
                 <div class="row align-items-center">
                   <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="side_block">
-                      <img src="assets/img/slider1.jpg" class="img-fluid" alt="" />
+                      {/* <img src={slider1} class="img-fluid" alt="" /> */}
                     </div>
                   </div>
                 </div>
@@ -52,22 +53,22 @@ function Home() {
               <ul class="notificationList">
                 <li>
                   <a href="#" class="notifyItem">
-                    Must Read - Public Notice <img src="../assets/img/newSticker.png" alt="New" />
+                    Must Read - Public Notice <img src={NewSticker} alt="New" />
                   </a>
                 </li>
                 <li>
                   <a href="#" class="notifyItem">
-                    Launching SSC - JE Live Online Course <img src="assets/img/newSticker.png" alt="New" />
+                    Launching SSC - JE Live Online Course <img src={NewSticker} alt="New" />
                   </a>
                 </li>
                 <li>
                   <a href="#" class="notifyItem">
-                    GATE 2022 Live Online Course <img src="assets/img/newSticker.png" alt="New" />
+                    GATE 2022 Live Online Course <img src={NewSticker} alt="New" />
                   </a>
                 </li>
                 <li>
                   <a href="#" class="notifyItem">
-                    Launching Chemical Engineering Course for GATE 2022 <img src="assets/img/newSticker.png" alt="New" />
+                    Launching Chemical Engineering Course for GATE 2022 <img src={NewSticker} alt="New" />
                   </a>
                 </li>
                 <li>

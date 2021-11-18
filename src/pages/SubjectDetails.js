@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react';
+import {videos} from '../data/videos';
+import {reviews} from '../data/reviews';
+import Video from '../component/Video';
+import Reviews from '../component/Reviews';
 
 function SubjectDetails() {
+	
+  const [data, setData] = useState(videos);
+
   return (
     <div className = 'subjectDetails'>
       {/* <!-- ============================ Page Title Start================================== --> */}
@@ -123,70 +130,7 @@ function SubjectDetails() {
 					<div class="row justify-content-center mb-5">
 						<div class="col-xl-12 col-lg-12 col-sm-12">
 							<div class="vdo-slider space">
-								{/* <!-- Single Item --> */}
-								<div class="single_items lios_item">
-									<div class="vdoSect border">
-										<div class="_vdo_flex">
-											<iframe width="100%" height="175" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-											</iframe>
-										</div>
-									</div>
-								</div>
-								{/* <!-- Single Item --> */}
-								<div class="single_items lios_item">
-									<div class="vdoSect border">
-										<div class="_vdo_flex">
-											<iframe width="100%" height="175" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-											</iframe>
-										</div>
-									</div>
-								</div>
-								{/* <!-- Single Item --> */}
-								<div class="single_items lios_item">
-									<div class="vdoSect border">
-										<div class="_vdo_flex">
-											<iframe width="100%" height="175" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-											</iframe>
-										</div>
-									</div>
-								</div>
-								{/* <!-- Single Item --> */}
-								<div class="single_items lios_item">
-									<div class="vdoSect border">
-										<div class="_vdo_flex">
-											<iframe width="100%" height="175" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-											</iframe>
-										</div>
-									</div>
-								</div>
-								{/* <!-- Single Item --> */}
-								<div class="single_items lios_item">
-									<div class="vdoSect border">
-										<div class="_vdo_flex">
-											<iframe width="100%" height="175" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-											</iframe>
-										</div>
-									</div>
-								</div>
-								{/* <!-- Single Item --> */}
-								<div class="single_items lios_item">
-									<div class="vdoSect border">
-										<div class="_vdo_flex">
-											<iframe width="100%" height="175" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-											</iframe>
-										</div>
-									</div>
-								</div>
-								{/* <!-- Single Item --> */}
-								<div class="single_items lios_item">
-									<div class="vdoSect border">
-										<div class="_vdo_flex">
-											<iframe width="100%" height="175" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-											</iframe>
-										</div>
-									</div>
-								</div>
-								
+								<Video data = {data} />									
 							</div>
 						
 						</div>
@@ -203,72 +147,8 @@ function SubjectDetails() {
 					<div class="row justify-content-center  mb-5">
 						<div class="col-xl-12 col-lg-12 col-sm-12">
 							<div class="vdo-slider space">
-								{/* <!-- Single Item --> */}
-								<div class="single_items lios_item">
-									<div class="vdoSect border">
-										<div class="_vdo_flex">
-											<iframe width="100%" height="175" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-											</iframe>
-										</div>
-									</div>
-								</div>
-								{/* <!-- Single Item --> */}
-								<div class="single_items lios_item">
-									<div class="vdoSect border">
-										<div class="_vdo_flex">
-											<iframe width="100%" height="175" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-											</iframe>
-										</div>
-									</div>
-								</div>
-								{/* <!-- Single Item --> */}
-								<div class="single_items lios_item">
-									<div class="vdoSect border">
-										<div class="_vdo_flex">
-											<iframe width="100%" height="175" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-											</iframe>
-										</div>
-									</div>
-								</div>
-								{/* <!-- Single Item --> */}
-								<div class="single_items lios_item">
-									<div class="vdoSect border">
-										<div class="_vdo_flex">
-											<iframe width="100%" height="175" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-											</iframe>
-										</div>
-									</div>
-								</div>
-								{/* <!-- Single Item --> */}
-								<div class="single_items lios_item">
-									<div class="vdoSect border">
-										<div class="_vdo_flex">
-											<iframe width="100%" height="175" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-											</iframe>
-										</div>
-									</div>
-								</div>
-								{/* <!-- Single Item --> */}
-								<div class="single_items lios_item">
-									<div class="vdoSect border">
-										<div class="_vdo_flex">
-											<iframe width="100%" height="175" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-											</iframe>
-										</div>
-									</div>
-								</div>
-								{/* <!-- Single Item --> */}
-								<div class="single_items lios_item">
-									<div class="vdoSect border">
-										<div class="_vdo_flex">
-											<iframe width="100%" height="175" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-											</iframe>
-										</div>
-									</div>
-								</div>
-								
+								<Video data = {data} />													
 							</div>
-						
 						</div>
 					</div>
 					
@@ -292,66 +172,7 @@ function SubjectDetails() {
 							<h3>Reviews -  <span> 3 </span></h3>
 						</div>
 						<div class="reviews-comments-wrap">
-							{/* <!-- reviews-comments-item -->   */}
-							<div class="reviews-comments-item">
-								<div class="review-comments-avatar">
-									<img src="https://via.placeholder.com/500x500" class="img-fluid" alt="" /> 
-								</div>
-								<div class="reviews-comments-item-text">
-									<h4><a href="#">Josaph Manrty</a><span class="reviews-comments-item-date"><i class="ti-calendar theme-cl"></i>27 Oct 2019</span></h4>
-									
-									<div class="listing-rating"><i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star active"></i></div>
-									<div class="clearfix"></div>
-									<p>" Commodo est luctus eget. Proin in nunc laoreet justo volutpat blandit enim. Sem felis, ullamcorper vel aliquam non, varius eget justo. Duis quis nunc tellus sollicitudin mauris. "</p>
-									<div class="pull-left reviews-reaction">
-										<a href="#" class="comment-like active"><i class="ti-thumb-up"></i> 12</a>
-										<a href="#" class="comment-dislike active"><i class="ti-thumb-down"></i> 1</a>
-										<a href="#" class="comment-love active"><i class="ti-heart"></i> 07</a>
-									</div>
-								</div>
-							</div>
-							{/* <!--reviews-comments-item end-->   */}
-							
-							{/* <!-- reviews-comments-item -->   */}
-							<div class="reviews-comments-item">
-								<div class="review-comments-avatar">
-									<img src="https://via.placeholder.com/500x500" class="img-fluid" alt="" /> 
-								</div>
-								<div class="reviews-comments-item-text">
-									<h4><a href="#">Rita Chawla</a><span class="reviews-comments-item-date"><i class="ti-calendar theme-cl"></i>2 Nov May 2019</span></h4>
-									
-									<div class="listing-rating"><i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star"></i></div>
-									<div class="clearfix"></div>
-									<p>" Commodo est luctus eget. Proin in nunc laoreet justo volutpat blandit enim. Sem felis, ullamcorper vel aliquam non, varius eget justo. Duis quis nunc tellus sollicitudin mauris. "</p>
-									<div class="pull-left reviews-reaction">
-										<a href="#" class="comment-like active"><i class="ti-thumb-up"></i> 12</a>
-										<a href="#" class="comment-dislike active"><i class="ti-thumb-down"></i> 1</a>
-										<a href="#" class="comment-love active"><i class="ti-heart"></i> 07</a>
-									</div>
-								</div>
-							</div>
-							{/* <!--reviews-comments-item end--> */}
-							
-							{/* <!-- reviews-comments-item -->   */}
-							<div class="reviews-comments-item">
-								<div class="review-comments-avatar">
-									<img src="https://via.placeholder.com/500x500" class="img-fluid" alt="" /> 
-								</div>
-								<div class="reviews-comments-item-text">
-									<h4><a href="#">Adam Wilsom</a><span class="reviews-comments-item-date"><i class="ti-calendar theme-cl"></i>10 Nov 2019</span></h4>
-									
-									<div class="listing-rating"><i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star active"></i></div>
-									<div class="clearfix"></div>
-									<p>" Commodo est luctus eget. Proin in nunc laoreet justo volutpat blandit enim. Sem felis, ullamcorper vel aliquam non, varius eget justo. Duis quis nunc tellus sollicitudin mauris. "</p>
-									<div class="pull-left reviews-reaction">
-										<a href="#" class="comment-like active"><i class="ti-thumb-up"></i> 12</a>
-										<a href="#" class="comment-dislike active"><i class="ti-thumb-down"></i> 1</a>
-										<a href="#" class="comment-love active"><i class="ti-heart"></i> 07</a>
-									</div>
-								</div>
-							</div>
-							{/* <!--reviews-comments-item end--> */}
-							
+							<Reviews reviews = {reviews} />
 						</div>
 					</div>
 						

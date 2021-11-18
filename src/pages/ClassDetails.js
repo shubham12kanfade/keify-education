@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react';
+import {videos} from '../data/videos';
+import Video from '../component/Video';
+import Cr3 from '../assets/img/cr-3.jpg';
 
 function ClassDetails() {
+	
+  const [data, setData] = useState(videos);
+
   return (
     <div className = 'classDetails'>
       {/* <!-- ============================ Page Title Start================================== --> */}
@@ -152,70 +158,7 @@ function ClassDetails() {
 					<div class="row justify-content-center">
 						<div class="col-xl-12 col-lg-12 col-sm-12">
 							<div class="vdo-slider space">
-								{/* <!-- Single Item --> */}
-								<div class="single_items lios_item">
-									<div class="vdoSect border">
-										<div class="_vdo_flex">
-											<iframe width="100%" height="175" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-											</iframe>
-										</div>
-									</div>
-								</div>
-								{/* <!-- Single Item --> */}
-								<div class="single_items lios_item">
-									<div class="vdoSect border">
-										<div class="_vdo_flex">
-											<iframe width="100%" height="175" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-											</iframe>
-										</div>
-									</div>
-								</div>
-								{/* <!-- Single Item --> */}
-								<div class="single_items lios_item">
-									<div class="vdoSect border">
-										<div class="_vdo_flex">
-											<iframe width="100%" height="175" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-											</iframe>
-										</div>
-									</div>
-								</div>
-								{/* <!-- Single Item --> */}
-								<div class="single_items lios_item">
-									<div class="vdoSect border">
-										<div class="_vdo_flex">
-											<iframe width="100%" height="175" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-											</iframe>
-										</div>
-									</div>
-								</div>
-								{/* <!-- Single Item --> */}
-								<div class="single_items lios_item">
-									<div class="vdoSect border">
-										<div class="_vdo_flex">
-											<iframe width="100%" height="175" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-											</iframe>
-										</div>
-									</div>
-								</div>
-								{/* <!-- Single Item --> */}
-								<div class="single_items lios_item">
-									<div class="vdoSect border">
-										<div class="_vdo_flex">
-											<iframe width="100%" height="175" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-											</iframe>
-										</div>
-									</div>
-								</div>
-								{/* <!-- Single Item --> */}
-								<div class="single_items lios_item">
-									<div class="vdoSect border">
-										<div class="_vdo_flex">
-											<iframe width="100%" height="175" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
-											</iframe>
-										</div>
-									</div>
-								</div>
-								
+								<Video data = {data} />								
 							</div>
 						
 						</div>
@@ -243,7 +186,7 @@ function ClassDetails() {
 							<div class="crs_grid_list">
 								
 								<div class="crs_grid_list_thumb">
-									<a href="course-detail.html"><img src="assets/img/cr-3.jpg" class="img-fluid rounded" alt="" /></a>
+									<a href="course-detail.html"><img src={Cr3} class="img-fluid rounded" alt="" /></a>
 								</div>
 								
 								<div class="crs_grid_list_caption">
@@ -271,7 +214,7 @@ function ClassDetails() {
 							<div class="crs_grid_list">
 								
 								<div class="crs_grid_list_thumb">
-									<a href="course-detail.html"><img src="assets/img/cr-3.jpg" class="img-fluid rounded" alt="" /></a>
+									<a href="course-detail.html"><img src={Cr3} class="img-fluid rounded" alt="" /></a>
 								</div>
 								
 								<div class="crs_grid_list_caption">
@@ -298,7 +241,7 @@ function ClassDetails() {
 							<div class="crs_grid_list">
 								
 								<div class="crs_grid_list_thumb">
-									<a href="course-detail.html"><img src="assets/img/cr-3.jpg" class="img-fluid rounded" alt="" /></a>
+									<a href="course-detail.html"><img src={Cr3} class="img-fluid rounded" alt="" /></a>
 								</div>
 								
 								<div class="crs_grid_list_caption">
@@ -325,7 +268,7 @@ function ClassDetails() {
 							<div class="crs_grid_list">
 								
 								<div class="crs_grid_list_thumb">
-									<a href="course-detail.html"><img src="assets/img/cr-3.jpg" class="img-fluid rounded" alt="" /></a>
+									<a href="course-detail.html"><img src={Cr3} class="img-fluid rounded" alt="" /></a>
 								</div>
 								
 								<div class="crs_grid_list_caption">

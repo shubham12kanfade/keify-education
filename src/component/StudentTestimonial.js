@@ -5,12 +5,15 @@ import Column from "../assets/img/column.svg";
 
 function StudentTestimonial({ data }) {
   const breakPoints = [
-    { width: 1, itemsToShow: 3 },    
+    { width: 1, itemsToShow: 1 },  
+    { width: 550, itemsToShow: 2 },
+    { width: 768, itemsToShow: 3 },
+    { width: 1200, itemsToShow: 3 }   
   ];
   return (
     <div>
       {
-        <Carousel breakPoints={breakPoints} style = {{ width: '1200px'}}>{
+        <Carousel breakPoints={breakPoints} >{
           data.map((person) => {
             const { id, name, occupation, rating, testimony } = person;
             return (
@@ -43,7 +46,7 @@ function StudentTestimonial({ data }) {
         }      
         </Carousel>
       }
-      </div>
+    </div>
       
   )
 }
