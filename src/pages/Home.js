@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
 import {testimonial} from '../data/testimonial';
+import { Carousel } from 'react-bootstrap';
 import StudentTestimonial from '../component/StudentTestimonial';
 import slider1 from '../assets/img/slider1.jpg';
+import slider2 from '../assets/img/slider2.jpg';
 import NewSticker from '../assets/img/newSticker.png';
+import Exam from '../component/Exam';
 
 function Home() {
+   const [data, setData] = useState(testimonial);
+   const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
+
   
-  const [data, setData] = useState(testimonial);
 
   return (
     <div className="home">
@@ -20,13 +29,26 @@ function Home() {
                 <div class="row align-items-center">
                   <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="side_block">
-                      <img src={slider1} class="img-fluid" alt="" />
+                      
+                      <Carousel   activeIndex={index} onSelect={handleSelect} controls={false} autoPlay=
+{true}>
+                       <Carousel.Item interval={2000}>
+                       <img src={slider1} class="img-fluid" alt="" />
+                      </Carousel.Item>
+                      <Carousel.Item interval={2000}>
+                       <img src={slider2} class="img-fluid" alt="" />
+                      </Carousel.Item>
+                      <Carousel.Item interval={2000}>
+                       <img src={slider1} class="img-fluid" alt="" />
+                      </Carousel.Item>
+                    </Carousel> 
+                    {/* <img src={slider1} class="img-fluid" alt="" /> */}
                     </div>
                   </div>
                 </div>
               </div>
               {/* <!-- Single Item --> */}
-              <div class="single_items lios_item">
+              {/* <div class="single_items lios_item">
                 <div class="row align-items-center">
                   <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="side_block">
@@ -34,17 +56,17 @@ function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               {/* <!-- Single Item --> */}
-              <div class="single_items lios_item">
+              {/* <div class="single_items lios_item">
                 <div class="row align-items-center">
                   <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="side_block">
-                      {/* <img src={slider1} class="img-fluid" alt="" /> */}
+                    <img src="assets/img/slider2.jpg" class="img-fluid" alt="" />
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div class="col-xl-3 col-lg-3 col-sm-3 col-xs-12 col-md-3 notificatBlk">
@@ -96,39 +118,17 @@ function Home() {
           <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="crp_box fl_color ovr_tops">
               <div class="row align-items-center">
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <a href="#">
-                    <div class="dro_140 edu_cat_2 cat-2">
-                      <div class="dro_141"><i class="fa fa-journal-whills"></i></div>
-                      <div class="dro_142">
-                        <h6>CAT</h6>
-                        <p>CAT is the Common Admission Test for admissions to MBA programmes in 20 Indian Institutes of Management (IIMs) and top B-schools in India.</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <a href="#">
-                    <div class="dro_140 edu_cat_2 cat-4">
-                      <div class="dro_141 st-1"><i class="fa fa-business-time"></i></div>
-                      <div class="dro_142">
-                        <h6>GATE</h6>
-                        <p>Graduate Aptitude Test in Engineering (GATE 2022) is one of an online national level entrance exam, and it is conducted by the Indian Institute of Science...</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <a href="#">
-                    <div class="dro_140 edu_cat_2 cat-6">
-                      <div class="dro_141 st-3"><i class="fa fa-user-shield"></i></div>
-                      <div class="dro_142">
-                        <h6>University EXAMS</h6>
-                        <p>What would I do after 12 th ? How would I get into the Under Graduate Management Programs? Which program would be better to choose?</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
+                
+               <Exam  title='CAT' description='CAT is the Common Admission Test for admissions to
+                    MBA programmes in 20 Indian Institutes of Management (IIMs) and top B-schools in India.'
+                icon={<i class="fa fa-journal-whills"></i>}/>
+                <Exam   title='GATE'  description='Graduate Aptitude Test in Engineering (GATE 2022) 
+                      is one of an online national level entrance exam,and it is conducted
+                      by the Indian Institute of Science...' icon={<i class="fa fa-business-time"></i>}/>
+                <Exam title='University EXAMS'  description='What would I do after 12 th ? 
+                     How would I get into the Under Graduate Management Programs? 
+                     Which program would be better to choose?' icon={<i class="fa fa-user-shield"></i>}/> 
+                
               </div>
             </div>
           </div>
