@@ -4,15 +4,15 @@ import AppStore from '../assets/img/icon-appstore.svg'
 
 function Footer() {
   return (
-    <footer class="skin-light-footer style-2">
-      <div class="footer-middle">
-        <div class="container">
-          <div class="row">            
-            <div class="col-lg-4 col-md-4">
-              <div class="footer_widget">
-                <h4 class="extream mb-3">Get the App</h4>
+    <footer className ="skin-light-footer style-2">
+      <div className="footer-middle">
+        <div className="container">
+          <div className="row">            
+            <div className="col-lg-4 col-md-4">
+              <div className="footer_widget">
+                <h4 className="extream mb-3">Get the App</h4>
                 <p>Download our mobile app to enjoy internet free streaming of videos lectures and for a seamless user experience</p>
-                <div class="foot-news-last">
+                <div className="foot-news-last">
                   <a href="#" target="_blank">
                     <img src={GooglePlay} alt="icon-googleplay" />
                   </a>
@@ -23,12 +23,12 @@ function Footer() {
               </div>
             </div>
             
-            <div class="col-lg-8 col-md-8 ml-auto">
-              <div class="row">
-                <div class="col-lg-4 col-md-4">
-                  <div class="footer_widget">
-                    <h4 class="widget_title">Exams</h4>
-                    <ul class="footer-menu">
+            <div className="col-lg-8 col-md-8 ml-auto">
+              <div className="row">
+                <div className="col-lg-4 col-md-4">
+                  <div className="footer_widget">
+                    <h4 className="widget_title">Exams</h4>
+                    <ul className="footer-menu">
                       <li><a href="#">MBA</a></li>
                       <li><a href="#">GATE</a></li>
                       <li><a href="#">CUCET</a></li>
