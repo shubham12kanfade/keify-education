@@ -21,11 +21,11 @@ function Exam(props) {
      
     return (
         <>
-             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+             <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                   <a href="#">
-                    <div class={wraperClasses.join(" ")}>
-                      <div class={iconClasses.join(" ")}>{props.icon}</div>
-                      <div class="dro_142">
+                    <div className={wraperClasses.join(" ")}>
+                      <div className={iconClasses.join(" ")}>{props.icon}</div>
+                      <div className="dro_142">
                         <h6>{props.title}</h6>
                         <p>{props.description}</p>
                       </div>
